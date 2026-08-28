@@ -1,0 +1,33 @@
+#navbar {
+    background: black;
+    color: aliceblue;
+    height: 60px;
+}
+a {
+    margin-right: 150px;
+}
+
+#logo {
+    color: orangered;
+}
+
+button{
+    color: orangered;
+}
+.Child {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+#parent {
+    height: 500px;
+}

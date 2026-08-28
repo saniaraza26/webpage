@@ -1,0 +1,8 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-image: url("flower.webp");
+    background-size: cover;
+    position: fixed;
+    right: 0;
+}

@@ -1,0 +1,32 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: deeppink;
+    border: 2px solid black;
+    /* animation-name: clranimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; */
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    /* animation-direction: normal;
+    animation-direction: reverse;
+    animation-direction: alternate;
+    animation-direction: alternate-reverse; */
+    animation: clranimate 2s ease 1s infinite normal;
+}
+@keyframes clranimate {
+    0% {
+        left: 50px;
+        back-ground-color: deeppink;
+    }
+    50% {
+        background-color: cadetblue;
+    }
+    100% {
+        left:  100px;
+        background-color: blueviolet;
+    }
+}

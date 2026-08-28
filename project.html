@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxury Wear</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+header{
+background:black;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-size:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('1000588914.jpg.webp');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h2{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+font-size:20px;
+line-height:1.8;
+}
+
+.btn{
+padding:14px 35px;
+background:#ff9800;
+border:none;
+color:white;
+font-size:18px;
+border-radius:6px;
+cursor:pointer;
+margin-top:20px;
+}
+
+.login-section{
+display:flex;
+justify-content:center;
+padding:80px 20px;
+background:white;
+}
+
+.form-box{
+width:420px;
+background:#111;
+color:white;
+padding:40px;
+border-radius:12px;
+}
+
+.form-box h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+.form-box input{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:none;
+border-radius:6px;
+}
+
+.form-box button{
+width:100%;
+padding:14px;
+margin-top:10px;
+border:none;
+background:#ff9800;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.qualities{
+padding:80px 20px;
+text-align:center;
+background:#f8f8f8;
+}
+
+.qualities h2{
+font-size:45px;
+margin-bottom:40px;
+}
+
+.quality-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.quality{
+background:#111;
+color:white;
+padding:30px;
+border-radius:12px;
+}
+
+.quality h3{
+color:#ff9800;
+margin-bottom:15px;
+}
+
+.collection-page{
+display:none;
+padding:60px 20px;
+}
+
+.collection-page h1{
+text-align:center;
+margin-bottom:50px;
+font-size:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+max-width:1300px;
+margin:auto;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+height:420px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h2{
+margin-bottom:10px;
+}
+
+.price{
+font-size:24px;
+font-weight:bold;
+color:#ff9800;
+margin:10px 0;
+}
+
+.cart{
+position:fixed;
+top:20px;
+right:20px;
+background:#ff9800;
+padding:12px 18px;
+border-radius:8px;
+color:white;
+font-weight:bold;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="cart">
+Cart: <span id="cartCount">0</span>
+</div>
+
+<!-- FIRST PAGE -->
+
+<div id="firstPage">
+
+<header>
+
+<h1>LUXURY WEAR</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Login</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Premium Branded Fashion</h2>
+
+<p>
+Luxury eastern fashion with premium embroidery,
+modern designs, elegant stitching and high-quality fabrics.
+</p>
+
+<button class="btn" onclick="scrollToLogin()">
+Get Started
+</button>
+
+</section>
+
+<section class="qualities">
+
+<h2>Why Choose Us?</h2>
+
+<div class="quality-grid">
+
+<div class="quality">
+<h3>Premium Quality</h3>
+<p>
+Luxury fabric with premium finishing and embroidery.
+</p>
+</div>
+
+<div class="quality">
+<h3>Modern Fashion</h3>
+<p>
+Latest stylish eastern fashion collections.
+</p>
+</div>
+
+<div class="quality">
+<h3>Fast Delivery</h3>
+<p>
+Delivery service available all over Pakistan.
+</p>
+</div>
+
+<div class="quality">
+<h3>Affordable Prices</h3>
+<p>
+Luxury dresses available at reasonable prices.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="login-section">
+
+<div class="form-box">
+
+<h2>Login / Signup</h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="signupUser()">
+Signup
+</button>
+
+<button onclick="loginUser()">
+Login
+</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Contact Us</h2>
+
+<p>
+nehaaal926@gmail.com
+</p>
+
+</footer>
+
+</div>
+
+<!-- SECOND PAGE -->
+
+<div id="secondPage" class="collection-page">
+
+<h1>Luxury Collection</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="1000588914.jpg.webp">
+
+<div class="card-content">
+
+<h2>Emerald Queen</h2>
+
+<p>
+<b>Brand:</b> Luxury Wear Signature
+</p>
+
+<p>
+Elegant green embroidered premium dress
+for luxury fashion lovers.
+</p>
+
+<div class="price">
+PKR 4500
+</div>
+
+<button class="btn" onclick="addToCart('Emerald Queen')">
+Add To Cart
+</button>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="1000588915.jpg.jpg">
+
+<div class="card-content">
+
+<h2>Princess Bloom</h2>
+
+<p>
+<b>Brand:</b> Kids Fashion Elite
+</p>
+
+<p>
+Stylish kids collection with soft premium fabric
+and modern design.
+</p>
+
+<div class="price">
+PKR 3500
+</div>
+
+<button class="btn" onclick="addToCart('Princess Bloom')">
+Add To Cart
+</button>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="1000588916.jpg.webp">
+
+<div class="card-content">
+
+<h2>Classic Royal Print</h2>
+
+<p>
+<b>Brand:</b> Royal Threads
+</p>
+
+<p>
+Elegant eastern black printed dress
+with premium stitching.
+</p>
+
+<div class="price">
+PKR 5200
+</div>
+
+<button class="btn" onclick="addToCart('Classic Royal Print')">
+Add To Cart
+</button>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="1000588917.jpg.webp">
+
+<div class="card-content">
+
+<h2>Soft Floral Grace</h2>
+
+<p>
+<b>Brand:</b> Noor Luxury
+</p>
+
+<p>
+Premium floral dress with soft pastel luxury style.
+</p>
+
+<div class="price">
+PKR 4800
+</div>
+
+<button class="btn" onclick="addToCart('Soft Floral Grace')">
+Add To Cart
+</button>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="1000588918.jpg.webp">
+
+<div class="card-content">
+
+<h2>Mustard Blossom</h2>
+
+<p>
+<b>Brand:</b> Modern Couture
+</p>
+
+<p>
+Modern floral outfit designed with luxury eastern cuts.
+</p>
+
+<div class="price">
+PKR 6000
+</div>
+
+<button class="btn" onclick="addToCart('Mustard Blossom')">
+Add To Cart
+</button>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="1000588919.jpg.webp">
+
+<div class="card-content">
+
+<h2>Soft Black Blossom</h2>
+
+<p>
+<b>Brand:</b> Omal Collection
+</p>
+
+<p>
+Lightweight soft pink outfit with floral design perfect for summer occasions.
+</p>
+
+<div class="price">
+PKR 5200
+</div>
+
+</div>
+<button class="btn" onclick="addToCart('Soft Black Blossom')">
+Add To Cart
+</button>
+
+<div class="card">
+
+<img src="1000588921.jpg.webp">
+
+<div class="card-content">
+
+<h2>White Rainbow Embroidery</h2>
+
+<p>
+<b>Brand:</b> Royal Threads
+</p>
+
+<p>
+Premium white dress with multi-color embroidery work giving a vibrant and luxury look for special occasions.
+</p>
+
+<div class="price">
+PKR 7000
+</div>
+
+</div>
+<button class="btn" onclick="addToCart('White Rainbow Embroidery')">
+Add To Cart
+</button>
+
+<div class="card">
+
+<img src="1000588923.jpg.webp">
+
+<div class="card-content">
+
+<h2>Midnight Black Elegance</h2>
+
+<p>
+<b>Brand:</b> Royal Couture
+</p>
+
+<p>
+Premium black dress with luxury embroidery and modern stylish cut.
+</p>
+
+<div class="price">
+PKR 6800
+</div>
+
+</div>
+<button class="btn" onclick="addToCart('Midnight Black Elegance')">
+Add To Cart
+</button>
+
+<div class="card">
+
+<img src="1000588927.jpg.webp">
+
+<div class="card-content">
+
+<h2>Midnight Elegance</h2>
+
+<p>
+<b>Brand:</b> Black Pearl Collection
+</p>
+
+<p>
+Luxury black dress crafted with elegant premium detailing.
+</p>
+
+<div class="price">
+PKR 7000
+</div>
+
+<button class="btn" onclick="addToCart('Midnight Elegance')">
+Add To Cart
+</button>
+
+</div>
+</div>
+
+</div>
+
+<footer>
+
+<h2>Contact Us</h2>
+
+<p>
+nehaaal926@gmail.com
+</p>
+
+</footer>
+
+</div>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+document.getElementById('cartCount').innerText = cart.length;
+
+function scrollToLogin(){
+
+window.scrollTo({
+top:1400,
+behavior:'smooth'
+});
+
+}
+
+function signupUser(){
+
+let username =
+document.getElementById('username').value;
+
+let email =
+document.getElementById('email').value;
+
+let password =
+document.getElementById('password').value;
+
+if(username==='' || email==='' || password===''){
+
+alert('Please fill all fields');
+
+return;
+
+}
+
+let users =
+JSON.parse(localStorage.getItem('users')) || [];
+
+users.push({
+username:username,
+email:email,
+password:password
+});
+
+localStorage.setItem(
+'users',
+JSON.stringify(users)
+);
+
+alert('Signup Successful! Now Login');
+
+}
+
+function loginUser(){
+
+let email =
+document.getElementById('email').value;
+
+let password =
+document.getElementById('password').value;
+
+let users =
+JSON.parse(localStorage.getItem('users')) || [];
+
+let validUser =
+users.find(user =>
+user.email===email &&
+user.password===password
+);
+
+if(validUser){
+
+alert('Login Successful!');
+
+document.getElementById('firstPage').style.display='none';
+
+document.getElementById('secondPage').style.display='block';
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+}
+else{
+
+alert('Invalid Email or Password');
+
+}
+
+}
+
+function addToCart(product){
+
+cart.push(product);
+
+localStorage.setItem(
+'cart',
+JSON.stringify(cart)
+);
+
+document.getElementById('cartCount').innerText =
+cart.length;
+
+alert(product + ' added to cart');
+
+}
+
+</script>
+
+</body>
+</html>

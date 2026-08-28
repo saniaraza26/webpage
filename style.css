@@ -1,0 +1,53 @@
+ /* Using element */
+ h3{
+    color: brown;
+     background-color: azure;
+}
+
+p{
+    color:darkblue;
+    background-color:bisque;
+}
+
+button{
+    color: darkcyan;
+    background-color: darkmagenta;
+}
+
+body{
+    background-color: black;
+    background-color: rgb(194, 34, 115);
+    background-color: #3c4f3c;
+    background-color: black;
+ }   
+
+ /* Using Universal Selector */
+  *{
+    color: blueviolet;
+    background-color: black;
+ }
+
+/* By idz */
+ #a01 {
+    color: aquamarine;
+ }
+
+#a02 {
+    color: brown;
+}
+#b03 {
+    color: cadetblue;
+}
+
+ /* By classes */
+.a5 {
+    color:aliceblue;
+} 
+
+#box{
+    background-color:blue;
+}
+
+button{
+    background-color: green;
+}

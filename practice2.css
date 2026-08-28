@@ -1,0 +1,16 @@
+div {
+    background: black;
+    color: aliceblue;
+    height: 60px;
+}
+a {
+    margin-right: 150px;
+}
+
+#logo {
+    color: orangered;
+}
+
+button{
+    color: orangered;
+}
